@@ -2,12 +2,12 @@
 <vs-row vs-justify="center" class="produk">
     <vs-collapse :type="type">
         <vs-collapse-item class="bantal">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Bantal
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="left" vs-align="left" vs-w="3.5" v-for="prod in Bantal" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -15,12 +15,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -28,12 +28,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="Cermin">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Cermin
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Cermin" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -41,12 +41,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -54,12 +54,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="Karpet">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Karpet
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Karpet" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -67,12 +67,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -80,12 +80,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="keranjang">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Keranjang
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Keranjang" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -93,12 +93,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -106,12 +106,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="kursi">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Kursi
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Kursi" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -119,12 +119,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -132,12 +132,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="lampu">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Lampu
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Lampu" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -145,12 +145,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -158,12 +158,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="placemat">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Placemat
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Placemat" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -171,12 +171,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -184,12 +184,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="tas">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Tas
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Tas" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -197,12 +197,12 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                        <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="build">Edit</vs-button>
+                        <vs-button type="gradient" color="primary" icon="build">Edit</vs-button>
                         <vs-button @click="$vs.notify({title:'Hapus',text:'Barang dihapus',color:'danger'})" color="danger" icon="delete">Hapus</vs-button>
                     </vs-row>
                 </div>
@@ -511,5 +511,48 @@ export default {
 </script>
 
 <style scoped>
-
+@font-face {
+    font-family: fontR;
+    src: url('../assets/Font/WanderlustLetters-Regular.otf') format('opentype'),
+    url('../assets/Font/wanderlustletters-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font1;
+    src: url('../assets/Font/tt0140m_.ttf') format('truetype'),
+    url('../assets/Font/tt0140m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font2;
+    src: url('../assets/Font/tt0141m_.ttf') format('truetype'),
+    url('../assets/Font/tt0141m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font3;
+    src: url('../assets/Font/tt0142m_.ttf') format('truetype'),
+    url('../assets/Font/tt0142m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font4;
+    src: url('../assets/Font/tt0143m_.ttf') format('truetype'),
+    url('../assets/Font/tt0143m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font5;
+    src: url('../assets/Font/tt0144m_.ttf') format('truetype'),
+    url('../assets/Font/tt0144m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font6;
+    src: url('../assets/Font/tt0145m_.ttf') format('truetype'),
+    url('../assets/Font/tt0145m_-webfont.woff') format('woff');
+}
+.prohed{
+    font-family: 'font5';
+}
+.pronem{
+    font-family: 'font3';
+}
+.prodesc{
+    font-family: 'font2';
+}
 </style>

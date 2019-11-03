@@ -7,26 +7,20 @@
     flat
     tile
     class="indigo lighten-1 white--text text-center"
+    min-width="1350px"
     >
-    <v-card-text>
-        <v-btn
-        v-for="icon in icons"
-        :key="icon"
-        class="mx-4 white--text"
-        icon
-        >
-        <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
+    <v-card-text class="fontR">
+        
     </v-card-text>
 
     <v-card-text class="white--text pt-0">
-        Rattanesia <br> ajsnhebqkwdwdnwidnwindiwndiwndwjnkac ehcaegdsndygwdhjawudnjwc uwidniadndwu hahahsahsausuqsuqhsuqhsuqhquhquhsquhsquhsqushquhsquhsquhquhsquhquhsuqhsuqhsuqhquhsqushqushqushqushqushqushqushquhsquhsquhsqushqushqushq
+        {{ new Date().getFullYear() }} — <strong class="fontR">Rattanesia</strong>
     </v-card-text>
 
     <v-divider></v-divider>
 
     <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        
     </v-card-text>
     </v-card>
 </v-footer>
@@ -35,17 +29,49 @@
 <script>
   export default {
     data: () => ({
-      icons: [
-        'fab fa-facebook',
-        'fab fa-twitter',
-        'fab fa-google-plus',
-        'fab fa-linkedin',
-        'fab fa-instagram',
-      ],
+      
     }),
   }
 </script>
 
-<style lang="sass" scoped>
-
+<style scoped>
+@font-face {
+    font-family: fontR;
+    src: url('../assets/Font/WanderlustLetters-Regular.otf') format('opentype'),
+    url('../assets/Font/wanderlustletters-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font1;
+    src: url('../assets/Font/tt0140m_.ttf') format('truetype'),
+    url('../assets/Font/tt0140m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font2;
+    src: url('../assets/Font/tt0141m_.ttf') format('truetype'),
+    url('../assets/Font/tt0141m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font3;
+    src: url('../assets/Font/tt0142m_.ttf') format('truetype'),
+    url('../assets/Font/tt0142m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font4;
+    src: url('../assets/Font/tt0143m_.ttf') format('truetype'),
+    url('../assets/Font/tt0143m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font5;
+    src: url('../assets/Font/tt0144m_.ttf') format('truetype'),
+    url('../assets/Font/tt0144m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font6;
+    src: url('../assets/Font/tt0145m_.ttf') format('truetype'),
+    url('../assets/Font/tt0145m_-webfont.woff') format('woff');
+}
+.fontR{
+  font-family: 'font1';
+  /* font-size: '200%' */
+}
 </style>

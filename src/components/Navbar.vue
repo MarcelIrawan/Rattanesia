@@ -7,15 +7,26 @@
             </vs-navbar-title>
         </div>
         <vs-navbar-item index="0">
-            <router-link to="/">Beranda</router-link>
+            <vs-button class="nvbrtxt" to="/" type="line">Home</vs-button>
+            <!-- <router-link  class="nvbrtxt" to="/">Beranda</router-link> -->
         </vs-navbar-item>
         <vs-navbar-item index="1">
-            <router-link to="/about">Tentang</router-link>
+            <vs-button class="nvbrtxt" to="/about" type="line">About Us</vs-button>
+            <!-- <router-link class="nvbrtxt" to="/about">About Us</router-link> -->
         </vs-navbar-item>
         <vs-navbar-item index="2">
-            <router-link to="/admin">Login</router-link>
+            <vs-button class="nvbrtxt" to="/service" type="line">Service</vs-button>
+            <!-- <router-link class="nvbrtxt" to="/">Service</router-link> -->
         </vs-navbar-item>
-        <vs-input icon="search" placeholder="Search" v-model="search"/>
+        <vs-navbar-item index="3">
+            <vs-button class="nvbrtxt" to="/cart" type="line">Cart</vs-button>
+            <!-- <router-link class="nvbrtxt" to="/">Cart</router-link> -->
+        </vs-navbar-item>
+        <vs-navbar-item index="4">
+            <vs-button class="nvbrtxt" @click="openAlert('primary')" to="/admin" color="primary" type="flat">Login</vs-button>
+            <!-- <router-link class="nvbrtxt" to="/admin">Login</router-link> -->
+        </vs-navbar-item>
+        <!-- <vs-input icon="search" placeholder="Search" v-model="search"/> -->
         </vs-navbar>
     </div>
 </template>
@@ -29,8 +40,26 @@ export default {
             mdiAccount
         }
     }),
+    methods:{
+    openAlert(color){
+        this.colorAlert = color || this.getColorRandom()
+        this.$vs.dialog({
+        color:this.colorAlert,
+        title: `Login`,
+        text: 'as admin',
+        accept:this.acceptAlert
+        })
+    },
+    acceptAlert(){
+        this.$vs.notify({
+        color:this.colorAlert,
+        title:'Login as admin',
+        text:''
+        })
+    },
     components: {
         Login
+    }
     }
 }
 </script>
@@ -40,10 +69,49 @@ export default {
     font-size: 18px;
 }
 @font-face {
+    font-family: fontR;
+    src: url('../assets/Font/WanderlustLetters-Regular.otf') format('opentype'),
+    url('../assets/Font/wanderlustletters-regular-webfont.woff') format('woff');
+}
+@font-face {
     font-family: font1;
-    src: url('../assets/Font/WanderlustLetters-Regular.otf') format('truetype'), url('../assets/Font/wanderlustletters-regular-webfont.woff') format('woff');
+    src: url('../assets/Font/tt0140m_.ttf') format('truetype'),
+    url('../assets/Font/tt0140m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font2;
+    src: url('../assets/Font/tt0141m_.ttf') format('truetype'),
+    url('../assets/Font/tt0141m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font3;
+    src: url('../assets/Font/tt0142m_.ttf') format('truetype'),
+    url('../assets/Font/tt0142m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font4;
+    src: url('../assets/Font/tt0143m_.ttf') format('truetype'),
+    url('../assets/Font/tt0143m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font5;
+    src: url('../assets/Font/tt0144m_.ttf') format('truetype'),
+    url('../assets/Font/tt0144m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font6;
+    src: url('../assets/Font/tt0145m_.ttf') format('truetype'),
+    url('../assets/Font/tt0145m_-webfont.woff') format('woff');
 }
 .fontR{
-    font-family: 'font1'
+    font-family: 'fontR';
+    font-size: 30px;
+}
+.nvbrtxt{
+    font-family: 'font1';
+    font-size: '80px';
+}
+.centerx{
+    color: 'D4C4C4';
 }
 </style>

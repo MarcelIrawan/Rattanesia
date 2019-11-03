@@ -1,3 +1,4 @@
+/*eslint-disable*/
 module.exports = {
   root: true,
   env: {
@@ -11,5 +12,5 @@ module.exports = {
   parserOptions: {
     parser: "babel-eslint"
   }
-  /*eslint-disable*/
+  
 };

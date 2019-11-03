@@ -2,12 +2,12 @@
 <vs-row vs-justify="center" class="produk">
     <vs-collapse :type="type">
         <vs-collapse-item class="bantal">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Bantal
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="left" vs-align="left" vs-w="3.5" v-for="prod in Bantal" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -15,7 +15,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -28,12 +28,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="Cermin">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Cermin
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Cermin" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -41,7 +41,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -54,12 +54,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="Karpet">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Karpet
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Karpet" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -67,7 +67,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -80,12 +80,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="keranjang">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Keranjang
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Keranjang" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -93,7 +93,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -106,12 +106,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="kursi">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Kursi
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Kursi" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -119,7 +119,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -132,12 +132,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="lampu">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Lampu
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Lampu" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -145,7 +145,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -158,12 +158,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="placemat">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Placemat
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Placemat" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -171,7 +171,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -184,12 +184,12 @@
             </vs-col>
         </vs-collapse-item>
         <vs-collapse-item class="tas">
-            <div slot="header">
+            <div class="prohed" slot="header">
                 Tas
             </div>
             <vs-col  style="margin: 15px;"  type="fixed" vs-justify="center" vs-align="center" vs-w="3.5" v-for="prod in Tas" :key="(prod.name,prod.asal,prod.desc)">
                 <vs-card actionable>
-                <div slot="header">
+                <div class="pronem" slot="header">
                     <h3>
                     {{prod.name}}
                     </h3>
@@ -197,7 +197,7 @@
                 <div slot="media" >
                     <img :src="prod.asal">
                 </div>
-                <div >
+                <div class="prodesc">
                     <span>{{prod.desc}}</span>
                 </div>
                 <div slot="footer">
@@ -218,12 +218,12 @@ export default {
     data: () => ({
         Bantal: [
             {
-                name: 'Bantal Kotak RumbaiAgel Zig Zag Natural',
+                name: 'Bantal Kotak Rumbai Agel Zig Zag Natural',
                 asal: 'https://i.ibb.co/PZ9zFjq/bntl2.jpg',
                 desc: 'Fungsi : Bantal, Bahan : Sea grass Inner (Sudah dengan bantal/inner di dalamnya), Ukuran : 40cm x 40cm, Rp 169.000'
             },
             {
-                name: 'BantalBulatRumbaiAgel Natural Polos',
+                name: 'Bantal Bulat Rumbai Agel Natural Polos',
                 asal: 'https://i.ibb.co/cNCS282/bntl1.jpg',
                 desc: 'Fungsi : Bantal Hiasan, Bahan : Sea grass Inner (Sudah dengan bantal/inner di dalamnya), Ukuran : Diameter 40cm, Rp 149.000'
             }
@@ -232,19 +232,19 @@ export default {
             {
                 name: 'Rattan Mirror Eye and Sun',
                 asal: 'https://i.ibb.co/86YVtdM/Rattan-Mirror-Eye-and-Sun.jpg',
-                desc: 'Fungsi : Home decor Cermin Bahan : Rattan Core Ukuran : 50cm x 50cm Rp 210.000'
+                desc: 'Fungsi : Home decor Cermin, Bahan : Rattan Core, Ukuran : 50cm x 50cm, Rp 210.000'
             },
         ],
         Karpet: [
             {
                 name: 'Seagrass Rug Motif Pancawarna Black',
                 asal: 'https://i.ibb.co/7YXJ5n1/Seagrass-Rug-Motif-Pancawarna-Black.jpg',
-                desc: 'Fungsi : Home decor Bahan : Seagrass sintetisplastik Ukuran : diameter 100cm Rp 235.000'
+                desc: 'Fungsi: Home decor, Bahan: Seagrass sintetis plastik, Ukuran: diameter 100cm, Rp 235.000'
             },
             {
                 name: 'Seagrass Rug Motif Babyblue Combination',
                 asal: 'https://i.ibb.co/m54tjr0/Seagrass-Rug-Motif-Babyblue-Combination.jpg',
-                desc: 'Bahan : Seagrass kombinasisintetisplastik Ukuran : Kecil : Diameter 100cm Sedang : Diameter 120cm Besar : Diameter 150cm Kecil Rp 235.000, SedangRp 260.000, BesarRp 310.000'
+                desc: 'Bahan: Seagrass kombinasi sintetis plastik, Ukuran: Kecil : Diameter 100cm, Sedang: Diameter 120cm, Besar : Diameter 150cm, Kecil Rp 235.000, Sedang Rp 260.000, Besar Rp 310.000'
             },
         ],
         Keranjang: [
@@ -511,5 +511,48 @@ export default {
 </script>
 
 <style scoped>
-
+@font-face {
+    font-family: fontR;
+    src: url('../assets/Font/WanderlustLetters-Regular.otf') format('opentype'),
+    url('../assets/Font/wanderlustletters-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font1;
+    src: url('../assets/Font/tt0140m_.ttf') format('truetype'),
+    url('../assets/Font/tt0140m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font2;
+    src: url('../assets/Font/tt0141m_.ttf') format('truetype'),
+    url('../assets/Font/tt0141m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font3;
+    src: url('../assets/Font/tt0142m_.ttf') format('truetype'),
+    url('../assets/Font/tt0142m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font4;
+    src: url('../assets/Font/tt0143m_.ttf') format('truetype'),
+    url('../assets/Font/tt0143m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font5;
+    src: url('../assets/Font/tt0144m_.ttf') format('truetype'),
+    url('../assets/Font/tt0144m_-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: font6;
+    src: url('../assets/Font/tt0145m_.ttf') format('truetype'),
+    url('../assets/Font/tt0145m_-webfont.woff') format('woff');
+}
+.prohed{
+    font-family: 'font5';
+}
+.pronem{
+    font-family: 'font3';
+}
+.prodesc{
+    font-family: 'font2';
+}
 </style>

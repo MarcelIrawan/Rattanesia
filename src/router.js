@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Admin from "./views/Admin.vue";
 import DaftarProduk from "./components/DaftarProduk.vue";
+// import Layanan from "./views/Layanan.Vue";
 import Login from "./components/Login.vue";
 
 Vue.use(Router);
@@ -36,6 +37,12 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: "/service",
+      name: "layanan",
+      component: () =>
+        import("./views/lynn.vue")
     }
   ]
 });
