@@ -23,7 +23,7 @@
             <!-- <router-link class="nvbrtxt" to="/">Cart</router-link> -->
         </vs-navbar-item>
         <vs-navbar-item index="4">
-            <vs-button class="nvbrtxt" @click="openAlert('primary')" to="/admin" color="primary" type="flat">Login</vs-button>
+            <vs-button class="nvbrtxt" to="/login" color="primary" type="flat">Login</vs-button>
             <!-- <router-link class="nvbrtxt" to="/admin">Login</router-link> -->
         </vs-navbar-item>
         <!-- <vs-input icon="search" placeholder="Search" v-model="search"/> -->
@@ -41,27 +41,12 @@ export default {
         }
     }),
     methods:{
-    openAlert(color){
-        this.colorAlert = color || this.getColorRandom()
-        this.$vs.dialog({
-        color:this.colorAlert,
-        title: `Login`,
-        text: 'as admin',
-        accept:this.acceptAlert
-        })
-    },
-    acceptAlert(){
-        this.$vs.notify({
-        color:this.colorAlert,
-        title:'Login as admin',
-        text:''
-        })
     },
     components: {
         Login
     }
     }
-}
+
 </script>
 
 <style lang="scss" scoped>

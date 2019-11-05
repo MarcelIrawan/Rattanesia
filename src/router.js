@@ -43,6 +43,18 @@ export default new Router({
       name: "layanan",
       component: () =>
         import("./views/lynn.vue")
+    },
+    {
+      path: "/cart",
+      name: "keranjang",
+      component: () =>
+        import("./views/Cart.vue")
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => 
+        import("./views/Login.vue")
     }
   ]
 });
