@@ -20,8 +20,8 @@
         <div class="centerx">
             <vs-upload automatic action="https://jsonplaceholder.typicode.com/posts/" @on-success="successUpload" />
         </div>
-            <vs-input placeholder="Nama Produk" v-model="valMultipe.value1"/>
-            <vs-input placeholder="Deskripsi Produk" v-model="valMultipe.value2"/>
+            <vs-input placeholder="Nama Produk" v-model="valMultipe.nama"/>
+            <vs-input placeholder="Deskripsi Produk" v-model="valMultipe.harga"/>
 
             <vs-alert :active="!validName" color="danger" icon="new_releases" >
             Data harus diisi!
@@ -38,17 +38,13 @@
     data(){
         return {
         select1:2,
-        options1:[
-            {text:'IT',value:0},
-            {text:'Blade Runner',value:2},
-            {text:'Thor Ragnarok',value:3},
-        ],
+        
         activePrompt:false,
         activePrompt2:false,
         val:'',
         valMultipe:{
-            value1:'',
-            value2:''
+            nama:'',
+            harga:''
         },
         }
     },
@@ -73,7 +69,7 @@
         })
         },
         successUpload(){
-            this.$vs.notify({color:'success',title:'Upload Success',text:'Lorem ipsum dolor sit amet, consectetur'})
+            this.$vs.notify({color:'success',title:'Upload Success',text:'Data produk ditambahkan'})
         },
     }
     }

@@ -8,15 +8,18 @@
                 Rattanesia
                 </h2>
                 <br>
-                <h3 class="login">Login</h3>
+                <div class="login">
+                    <vs-button type="line" to="/login">Login</vs-button>
+                    <vs-button type="line" to="/signup">Sign Up</vs-button>
+                </div>
             </div>
             <div class="input">
-                <vs-input type="email" label="User" placeholder="Enter username" v-model="value1"/>
-                <vs-input type="password" label="Password" placeholder="******" v-model="value2"/>
+                <vs-input type="email" label="User" placeholder="Enter your email" v-model="email"/>
+                <vs-input type="password" label="Password" placeholder="******" v-model="password"/>
             </div>
             <div slot="footer">
                 <vs-row vs-justify="flex-end">
-                <vs-button v-if="value2 === 'admin'" type="gradient" to="/admin" color="success">Login</vs-button>
+                <vs-button @click="login" type="gradient" color="success">Login</vs-button>
                 <vs-button type="gradient" to="/" color="danger">Back</vs-button>
                 </vs-row>
             </div>
@@ -27,27 +30,39 @@
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
-import kepala from '../components/Navbar';
-import kepala2 from '../components/Header';
-import kaki from '../components/Footer';
+import { fb } from '../firebase'
+import router from "../router.js"
 
 export default {
-    name: 'Layanan',
+    name: 'Login',
     components: {
-    HelloWorld,
-    kepala2,
-    kepala,
-    kaki,
+    
     },
     data() {
         return{
-            value1:'',
-            value2:''
+            email:'',
+            password:''
         }
     },
     methods:{
-        
+        login: function() {
+            fb.auth().signInWithEmailAndPassword(this.email, this.password)
+            .then((user) =>
+            {
+                this.$router.replace('admin');
+            })
+            .catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Wrong password.');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+                })
+        }
     }
 }
 </script>

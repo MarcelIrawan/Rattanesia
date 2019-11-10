@@ -10,13 +10,21 @@
   },
   "dependencies": {
     "@mdi/js": "^4.4.95",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
     "express": "^4.17.1",
     "firebase": "^7.2.3",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
     "material-icons": "^0.3.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.0",
     "serve-static": "^1.14.1",
     "vue": "^2.6.10",
+    "vue-firestore": "^0.3.22",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.3",
+    "vue2-editor": "^2.10.2",
     "vuesax": "^3.10.2",
     "vuetify": "^2.0.0"
   },
@@ -32,7 +40,9 @@
     "prettier": "^1.18.2",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "sweetalert2": "^9.1.5",
     "vue-cli-plugin-vuetify": "^0.6.3",
+    "vue-quill": "^1.5.1",
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.2.2"
   }
