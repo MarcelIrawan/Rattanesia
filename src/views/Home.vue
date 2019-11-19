@@ -24,5 +24,6 @@ export default {
     kaki,
     produk
   },
+  
 };
 </script>

@@ -11,7 +11,7 @@ import kepala2 from '../components/Header';
 import kaki from '../components/Footer';
 
 export default {
-    name: 'Layanan',
+    name: 'cart',
     components: {
     HelloWorld,
     kepala2,

@@ -10,6 +10,10 @@ const Swal = require('sweetalert2');
 window.Swal = Swal;
 import 'bootstrap';
 import 'popper.js';
+import Vuex from 'vuex';
+Vue.use(Vuex);
+
+import store from './store';
 
 
 const Toast = Swal.mixin({
@@ -19,6 +23,9 @@ const Toast = Swal.mixin({
   timer: 3000
 })
 window.Toast = Toast;
+
+Vue.component('add-to-cart', require('./views/Add-to-cart.vue').default);
+Vue.component('mini-cart', require('./components/MiniCart.vue').default);
 
 Vue.use(VueFirestore, {
   key: 'id',         // the name of the property. Default is '.key'.
@@ -39,6 +46,7 @@ fb.auth().onAuthStateChanged(function(user) {
       router,
       vuetify,
       Vuesax,
+      store,
       render: h => h(App)
     }).$mount("#app");
   }

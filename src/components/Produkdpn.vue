@@ -18,12 +18,17 @@
                         <div>
                             <h3>Harga Rp {{produk.harga}}</h3>
                         </div>
-                    <!-- <vs-button @click="$vs.notify({title:'CEK KERANJANG',text:'Barang masuk keranjang',color:'success'})" type="gradient" color="primary" icon="favorite">BELI</vs-button>
-                    <vs-button @click="$vs.notify({title:'Tersimpan',text:'Barang masuk favorite',color:'danger'})" color="danger" icon="favorite">SIMPAN</vs-button> -->
                     </vs-row>
+                    <add-to-cart
+                    :nama="produk.nama"
+                    :harga="produk.harga"
+                    :p-id="produk.id"
+                    :produkImg="getImage(produk.images)"></add-to-cart>
                 </div>
                 </vs-card>
+                
             </vs-col>
+            <!-- <vs-button @click="popupActivo=true">Keranjang</vs-button> -->
 </vs-row>
 </template>
 
@@ -31,22 +36,29 @@
 import {fb,db} from "../firebase";
 
 export default {
-    data: () => ({
-        produks: [],
-        produk:{
-            nama: '',
-            harga: '',
-            tags: [],
-            desc: '',
-            images: []
-        },
-    }),
+    data(){
+        return{
+            produks: [],
+            produk:{
+                nama: '',
+                harga: '',
+                tags: [],
+                desc: '',
+                images: []
+            },
+            popupActivo: false,
+        }
+    },
     firestore(){
         return {
         produks: db.collection('Produk')
         }
     },
     methods:{
+        getImage(images){
+            // console.log(images[0]);
+            return images[0]
+        }
 }
 }
 </script>

@@ -15,7 +15,7 @@
             </div>
             <div class="input">
                 <vs-input type="email" label="User" placeholder="Enter your email" v-model="email"/>
-                <vs-input type="password" label="Password" placeholder="******" v-model="password"/>
+                <vs-input @keyup.enter="login" type="password" label="Password" placeholder="******" v-model="password"/>
             </div>
             <div slot="footer">
                 <vs-row vs-justify="flex-end">

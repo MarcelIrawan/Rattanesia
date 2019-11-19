@@ -8,17 +8,17 @@
                 Rattanesia
                 </h2>
                 <br>
-                <!-- <h3 class="login">Sign up</h3> -->
+                <h3 class="login">Sign up</h3>
                 <div class="login">
                     <vs-button type="line" to="/login">Login</vs-button>
                     <vs-button type="line" to="/signup">Sign Up</vs-button>
                 </div>
             </div>
             <div class="input">
-                <!-- <vs-input type="name" label="Name" placeholder="Enter your name" v-model="name"/> -->
+                <vs-input type="name" label="Name" placeholder="Enter your name" v-model="name"/>
                 <vs-input type="email" label="Email" placeholder="Enter your email" v-model="email"/>
                 <vs-input type="email" label="Username" placeholder="Enter your username" v-model="username"/>
-                <vs-input type="password" @keyup="signUp" label="Password" placeholder="******" v-model="password"/>
+                <vs-input type="password" @keyup.enter="signUp" label="Password" placeholder="******" v-model="password"/>
                 <!-- <vs-input type="password" label="Verify your password" placeholder="******" v-model="password"/> -->
             </div>
             <div slot="footer">
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import {fb} from '../firebase.js';
+import {fb,db} from '../firebase.js';
 export default {
     name: 'Login',
     components: {
@@ -51,13 +51,21 @@ export default {
     methods:{
         signUp: function() {
             fb.auth().createUserWithEmailAndPassword(this.email, this.password)
-                    .then(function (user) {
-                        alert('Your account has been created')
-                    },
-                    function(err){
-                        alert('Oops ' + err.message)
-                    }
-                    );
+                    .then( (user) => {
+                        db.collection("profiles").doc(user.user.uid).set({
+                        name: this.name,
+                        username: this.username,
+                    })
+                    .then(() => {
+                        console.log("Document successfully written!");
+                    })
+                    .catch((error) => {
+                        console.error("Error writing document: ", error);
+                    });
+                        alert('Your account has been created');
+                        console.log(user.user.uid);
+                    this.$router.replace('admin')
+                    });
         }
     }
 }

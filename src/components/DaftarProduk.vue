@@ -145,7 +145,7 @@ export default {
             images: []
         },
         tag: null,
-        }
+    }
     },
     firestore(){
         return {
