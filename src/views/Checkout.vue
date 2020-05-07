@@ -1,34 +1,29 @@
 <template>
   <v-app>
     <kepala/>
-    <v-content>
-      <h1>TENTANG RATTANESIA</h1>
-        <h1>FAQ</h1>
-        <vs-collapse :type="type">
-      <vs-collapse-item>
-        <div slot="header">
-          Rattanesia
+    <div class='container'>
+      <div class="row">
+        <div class="col-md-9">
+          <h1>CheckOut Page</h1>
+          <ul>
+            <li v-for="item in this.$store.state.cart">
+                <div>
+                  <h3>{{item.namaProduk}}</h3>
+                  <p>{{item.hargaProduk}}</p>
+                  <p>Jumlah:{{item.produkQuantity}}</p>
+                </div>
+              </li>
+          </ul>
         </div>
-
-        Toko online produk rotan
-      </vs-collapse-item>
-      <vs-collapse-item>
-        <div slot="header">
-          Kontak
+        <div class="col-md-9">
+          <h2>Total Price</h2>
+          <li v-for="item in this.$store.state.cart">
+            {{item.hargaProduk*item.produkQuantity}}
+          </li>
+          <!-- <p>{{item.hargaProduk*item.produkQuantity}}</p> -->
         </div>
-        Hotline: 018291281291
-        <br/>
-        Email: cs@rattanesia.com
-      </vs-collapse-item>
-        <vs-collapse-item>
-        <div slot="header">
-          Cara Pemesanan
-        </div>
-        blablablablaalblalablablabalbal
-      </vs-collapse-item>
-        </vs-collapse>
-    </v-content>
-    <kaki/>
+      </div>
+    </div>
   </v-app>  
 </template>
 

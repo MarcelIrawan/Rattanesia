@@ -13,8 +13,8 @@
                         </ul>
                     </div>    
                     <div>
-                    <vs-button @click="; popupActivo=false;" type="filled">Checkout</vs-button>
-                    <vs-button @click="; popupActivo=false;" type="filled">Lanjut berbelanja</vs-button>
+                    <router-link @click="; popupActivo=false;" type="filled">Checkout</router-link>
+                    <vs-button to="/checkout" @click="; popupActivo=false;" type="filled">Lanjut berbelanja</vs-button>
                     </div>
                 </vs-popup>
     </div>
