@@ -20,7 +20,6 @@
           <li v-for="item in this.$store.state.cart">
             {{item.hargaProduk*item.produkQuantity}}
           </li>
-          <!-- <p>{{item.hargaProduk*item.produkQuantity}}</p> -->
         </div>
       </div>
     </div>
